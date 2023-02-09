@@ -7,6 +7,6 @@
 - Issue 내용은 같이 공부한 뒤 종료합니다.
 
 ## Schedule
-|단계|1|2|3|4|5|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-|1주차|[1712_손익분기점](https://www.acmicpc.net/problem/1712)|[2839_설탕 배달](https://www.acmicpc.net/problem/2839)|[10250_ACM 호텔](https://www.acmicpc.net/problem/10250)|[2869_달팽이는 올라가고 싶다](https://www.acmicpc.net/problem/2869)|[2292_	벌집](https://www.acmicpc.net/problem/2292)|
+|단계|1|2|3|4|5|보너스|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-|
+|1주차|[1712_손익분기점](https://www.acmicpc.net/problem/1712)|[2839_설탕 배달](https://www.acmicpc.net/problem/2839)|[10250_ACM 호텔](https://www.acmicpc.net/problem/10250)|[2869_달팽이는 올라가고 싶다](https://www.acmicpc.net/problem/2869)|[2292_	벌집](https://www.acmicpc.net/problem/2292)|@sojung32<br/>[1193_분수찾기](https://www.acmicpc.net/problem/1193)<br/>@yewon-Noh<br/>[2775_부녀회장이 될테야](https://www.acmicpc.net/problem/2775)|
