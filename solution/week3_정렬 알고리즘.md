@@ -8,6 +8,12 @@
 * 크기가 n인 배열을 선택 정렬 하는 경우 n개의 원소 중 최소 값을 찾는 연산을 n번 실행하므로 시간복잡도는 $O(n^2)$이다.  
 * 주어진 배열만을 사용하므로 공간복잡도는 $O(1)$이다.
 
+### 시간복잡도 $O(n log n)$인 정렬
+4. [병합 정렬(Merge Sort)](#4-병합-정렬)
+5. [힙 정렬(Heap Sort)](#5-힙-정렬)
+6. [퀵 정렬(Quick Sort)](#6-퀵-정렬)
+
+
 ### 공통 함수
 ```java
 /**
@@ -93,6 +99,48 @@ private void bubbleSort(int[] array){
                 swap(array, j, j+1);  // 필요한 경우 원소 교환
             }
         }
+    }
+}
+```
+
+## 4. 병합 정렬
+> 분할 정복 알고리즘 기반, 안정정렬
+> 원소가 한개가 될 때까지 배열을 반으로 나누고 인접한 배열끼리 정렬하며 합치는 방식이다.  
+> 
+> *안정정렬 : 정렬 후에도 같은 값을 가진 원소들의 순서가 일치
+
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/56745491/223942020-d8040c25-01b4-4d33-a651-79fec80bf92f.png)
+
+
+```java
+private void mergeSort(int[] array, int startIdx, int endIdx){
+    if(startIdx < endIdx){
+        int middleIdx = (startIdx + endIdx) / 2;
+
+        mergeSort(array, startIdx, middleIdx);
+        mergeSort(array, middleIdx + 1, endIdx);
+
+        int left = startIdx;
+        int right = middleIdx + 1;
+        int[] temp = new int[endIdx - startIdx + 1];
+        int tempIdx = 0;
+
+        while(left <= middleIdx && right <= endIdx){
+            if(array[left] < array[right]){
+                temp[tempIdx++] = array[left++];
+            } else {
+                temp[tempIdx++] = array[right++];
+            }
+        }
+
+        while(left <= middleIdx){ // left 원소만 남은 경우
+            temp[tempIdx++] = array[left++];
+        }
+        while(right <= endIdx){ // right 원소만 남은 경우
+            temp[tempIdx++] = array[right++];
+        }
+
+        System.arraycopy(temp, 0, array, startIdx, temp.length);
     }
 }
 ```
